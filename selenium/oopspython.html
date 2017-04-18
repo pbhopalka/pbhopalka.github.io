@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Python Oop - Organized by CSEA</title>
+
+		<meta name="description" content="Python Workshop to build a pong game and learn the basics of programming">
+		<meta name="author" content="Piyush Bhopalka">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+                
+                <section>
+                    <h5>A workshop on</h5>
+					<h1><font color="#FF5722">Object Orientation Using Python</font></h1>
+					<!--<p> <a href="http://www.facebook.com/CSEA.NITC">Organized by CSEA</a></p>-->
+					<small>Press 'F' for Fullscreen</small>
+					<br>
+					<small>Press <em>Space</em> to navigate the presentation</small>
+				</section>
+                
+               
+                <section>
+                    <p>Let's ponder into something other than Python. Let's go back to C.</p>
+                    <p>Have you heard of C++? Why was it created when you already have a "beautiful" language like C?</p>
+                </section>
+                
+                 <section data-background="img/c++.jpg">
+					<!-- No content for this page -->
+				</section>
+                
+                
+                <section>
+					<p>Did you know that the industry uses the Object Oriented paradigm for Programming?</p>
+					<p>It is a bit more to learn, but in the long run, it's helpful :)</p>
+                </section>
+                
+                
+                <section>
+					<h3><font color="orange">Major components to learn to program in OOP(s) style</font></h3>
+					<p>Classes and Abstraction</p>
+					<p>Encapsulation</p>
+                    <p>Inheritance</p>
+					<p>Polymorphism</p>
+					
+                </section>
+
+				<section>
+					<p><font color="#FF5722">Let's see how to code classes.. then we will see those topics</font></p>
+				</section>
+
+                 <section>
+                    <p>"class" is the keyword used to define classes</p>
+                    <pre><code data-trim contenteditable>
+class shape:
+    statement 1
+    statement 2
+    ....
+                    </code></pre>
+                    <p><small>It's as simple as that :P</small></p>
+				</section>
+                
+                <section>
+					<p>And you define the methods, the same way you define the functions except that you do it inside the class definition.</p>
+                    <pre><code data-trim contenteditable>
+class shape:
+    statement 1
+    statement 2
+    ....
+    def area(parameter):
+        statement 3
+        statement 4
+    
+    def perimeter(parameter):
+        statement 5
+        ....
+
+                    </code></pre>
+                    <p><small>Again, its simple</small></p>
+                </section>
+            
+                <section>
+                    <p>Let's define an object </p>
+                    <pre><code>
+square = shape()
+rectangle = shape()
+                    </code></pre>
+                    <p><small>Objects are instances of a class.</small></p>
+                </section>
+
+                <section>
+                    <p>When you instantiate an object, the function that is called <font color="red">implicitly</font> ...</p>
+                    <p>This kind of function is called a <font color="yellow">constructor</font>.</p>
+                    <pre><code>
+class shape:
+    def __init__(self):
+        #some statements
+                    </code></pre>
+                    <p><small>The function <i>__init__()</i> is optional. You may or may not have it.</small></p>
+                </section>
+                
+                <section>
+                    <p>But this is probably where you would want to define __init__() function...</p>
+                    <pre><code>
+class shape:
+    def __init__(self, l, b):
+        self.length = l
+        self.breadth = b
+                    </code></pre>
+                    <p><i>self</i> is used to address the object you're currently in. And the variables declared/accessed of this kind are called <font color="orange">instance variables</font></p>
+                    <p>Instance variables are only used after an object is declared.</p>
+                </section>
+                
+                <section>
+                    <h2>Class variables</h2>
+                    <pre><code>
+class shape:
+    count = 0
+
+    def __init__(self, l, b):
+        self.length = l
+        self.breadth = b
+        shape.count += 1                
+                    </code></pre>
+                    <p><small>Class variables are available to all the objects of that class. When you modify a class variable in one object, the change is visible to all the objects of that class.</small></p>
+                    <pre><code>
+square = shape(2, 2)
+rectangle = shape(4, 5)
+print shape.count #Should give 2
+                    </code></pre>
+                </section>
+                
+                <section>
+                    <p>Let's complete this class now<font color="yellow">:)</font></p>
+                    
+                    <pre><code data-trim contenteditable>
+class shape:
+    count = 0
+    
+    def __init__(self, l, b):
+        self.length = l
+        self.breadth = b
+        shape.count += 1
+
+    def area(self):
+        statement(s)
+        return self.area
+
+    def perimeter(self):
+        statement(s)    
+        return self.perimeter   
+
+                    </code></pre>
+                    <p><small>Dont forget the <font color="red">indentation</font> and <font color="red">colon (:)</font> where required</small></p>
+                </section>
+    
+                <section>
+                    <p>Let's write some code to create objects and use member functions.</p>
+                    <pre><code>
+square = shape(2,2)
+rectange = shape(4,5)
+print square.area()
+print rectangle.perimeter()
+                    </code></pre>    
+                    <p><small>The code should print the area of square and perimeter of the rectangle defined.</small></p>
+                </section>
+                
+                <section>
+                    <p>One more thing before we move ahead...</p>
+                </section>
+                
+                
+                  <section>
+                    <h3>Default values in functions</h3>
+                    <p>Let's see how we can <font color="orange">simulate</font> function overloading in Python...</p>
+                </section>
+                
+                <section>
+                    <p>Kind of function overloading...</p>
+                    <pre><code>
+def add(a, b, c=0)
+    return a+b+c
+    
+print (add(2,3))
+print (add(2,3,4))
+                    </code></pre>
+                    <p><small>Here, <font color="orange">c</font> has a default value of 0, but when passed as an argument, it will use the latest argument.</small></p>
+                </section>
+                
+                <section>
+                    <h2>Let's take a pause to see if everybody has completed!</h2>
+                </section>
+                
+                
+                 <section>
+                     <p>Let's give you a question to solve:</p>
+                     <pre><code>
+class circle:
+    
+    def __init(self, radius):
+        #some implementation
+        
+    def area(self):
+        #some implementation
+                     </code></pre>
+                    <p><small>Some stupid guy now instantiated 100 circles.... c1 to c100.</small></p>
+                    <p>Now what if I wanted to find the number of circles whose radius is less than 10 units. Give me the answer in simple 1 line.</p>
+                     <p><small>You can make minimal changes in the class code.</small></p>
+                    
+                    
+                    <!--<p><small>First one to answer gets a <font color="yellow">chocolate :P</font></small></p>-->
+                </section>            
+                
+                
+                <section>
+                    <p>Now's lets see the terms we used previously...</p>
+                </section>
+<!--Bhava's part -->
+
+                <section>
+					<h2><font color="#FF5722">Abstraction</font></h2>
+                    <pre><code>
+square = shape()
+print square.area()
+                    </code></pre>
+                    <p><small>I don't need to worry about how the area is being calculated. Its none of my business and shouldn't be yours :P</small></p>
+				</section>
+
+                <section>
+                    <p>In fact, in the industry you don't have to write code for everything. Somebody else defines a class for you and every class has some functions.</p>
+                    <p>A collection of such classes will form, what is called, <font color="orange">library</font>.</p>
+				</section>
+                
+<!--Piyush's part-->
+				<section>
+					<h3><font color="orange">Encapsulation</font></h3>
+					<p>Simply put your code inside a capsule</p>
+                    <p>So, writing a class is <font color="yellow">encapsulation</font>.</p>
+                    <p>Putting all the procedures that access or modify related data in one place, rather than having procedures spread all over the system</p>
+				</section>
+                
+<!--Prabhav's part on Inheritance -->
+                
+                <section>
+                    <p><font color="orange">Let's go a bit into Inheritance and polymorphism now...</font></p>
+                </section>
+            	
+                <section>
+					<h1><font color="#FF5722">Inheritance</font></h1>
+				</section>
+                
+                <section>
+					<img src="img/Inh_Meme_1.jpg"></img>
+					<!-- No content for this page -->
+				</section>
+
+				
+
+				<section>
+					<h2>Types of Inheritance</h2>
+					
+					<br>
+					<p>
+						<ul>
+							<li>After Death: <font color="yellow">Wealth</font></li>
+						</ul>
+					</p>
+					
+					<p>
+						<ul>
+							<li>After Birth: <font color="red">Diseases</font></li>
+						</ul>
+					</p>
+					<br>
+                    <p>
+						In Python, there is only the diseases 'wala' inheritance.
+						<br>
+						<br>
+						<font color="grey">(No wonder python is slow. pun intended.)</font>
+                    </p>
+				</section>
+				
+				
+				<section>
+					<h2>Inheritance in Python</h2>
+					<li>All classes are inherited from the special class object</li>
+					<li>Child <font color="grey">(derived)</font> Class inherits from Parent <font color="grey">(base)</font> Class</li>
+					<li>All the functions of the parent Class is also accessible by the child.</li>
+					<img src="img/Inh_Eg_1.png"></img>
+				</section>
+				
+				<section>
+					<h2>Example</h2>
+                    <pre><code>
+class DistinctList(list):
+	Sum = 0
+	def __init__(self):
+		list.__init__(self)
+	
+	def append(self,a):	
+		if a not in self:
+			list.append(self,a)
+			self.Sum+=a
+			
+	def Print(self):
+		print (self)
+
+L = DistinctList()
+
+L.append(1)
+L.append(2)
+L.append(1)
+L.append(4)
+
+print L.Sum
+print L[0]
+L.Print()
+                    </code></pre>
+                    <p>
+						<small>Function append() is overridden</small>
+                    </p>
+				</section>
+				
+				
+                <section>
+					<h2>Inheritance in Python</h2>
+					<p>
+						<li><font color="yellow">Multiple Inheritance: </font>A class can inherit from more than one class as well</li>
+					</p>
+					<p>
+						<img src="./img/Inh_Multiple.png"></img> 
+					</p>
+				</section>
+                
+                
+				<section>
+					<h2>Example</h2>
+                    <pre><code>
+class MessengerUser():
+	def __init__(self,userName,passWord):
+		self.userName=userName
+		self.passWord=passWord
+	
+	def Login(self):
+		# LogIn
+	
+	def Text(self,text,friendID):
+		 # send text to the friend
+
+class WhatsAppUser():
+	def __init__(self,phoneNumber):
+		self.phoneNumber=phoneNumber
+	
+	def Login(self,accessToken):
+		# LogIn
+	
+	def Text(self,text,friend):
+		 # send text to the friend
+		
+class Texter(MessengerUser,WhatsAppUser):
+	def __init__(self,phoneNumber,fbName,fbPass):
+		# set all data member
+		
+	def WhatsApp(self,text,friend):
+		WhatsAppUser.Text(self,text,friend)
+		
+	def Messenger(self,text,friend):
+		Messenger.Text(self,text,friend)
+
+                    </code></pre>
+                   
+				</section>
+                <section>
+                	<h3><font color="orange">Polymorphism</font></h3>
+                	<p>The concept used when you have two functions with the exact same function name, but different functions</p>
+                	<p>Let's see an example for better clarity...</p>      
+                </section>
+
+                <section>
+                    <p>I will use it in context with inheritance...</p>
+                	<pre><code data-trim contenteditable>
+class whatsapp_msg:
+	def __init__(self, message):
+		self.message = message
+
+	def send(self, to):
+		#send message to only person
+        
+class group_msg(whatsapp_msg):
+    def __init__(self, message):
+        whatsapp_msg(message)
+        
+    def send(self, to_list):
+        #here to is a list, so in implementation
+        #we will iterate over the list and send to all
+
+message=whatsapp_msg("Hey beautiful! :)")
+message.send("Rose")
+
+group_message = group_msg("Hey girls :)")
+girls = ["Rose", "Mary", "Emma"]
+group_message.send(girls)
+                	</code></pre>
+                    <p><small>Function overriding can also be called as polymorphism.</small></p>
+                </section>
+
+              
+                <section>
+                    <p><font color="#FF5722">That's it from the Python World. You can call yourself a Python Expert if you program using classes and objects and if you understood the contents of this presentation properly :)</font></p>
+                </section>
+        
+                <section>
+                    <h2><font color="#FF5722">AFTER THE BREAK!</font></h2>
+                    <p>We will now move onto the Selenium part. You will write a Selenium script yourself.</p>
+                    <p>For the next session, <a href="index.html#/1">Click here</a></p>
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

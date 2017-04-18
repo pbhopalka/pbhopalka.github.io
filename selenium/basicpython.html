@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Python Basics - Organized by CSEA</title>
+
+		<meta name="description" content="Python Workshop to build a pong game and learn the basics of programming">
+		<meta name="author" content="Piyush Bhopalka">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+                
+                <section>
+                    <h5>A workshop on</h5>
+					<h1><font color="#FF5722">Basics of Python</font></h1>
+					<!--<p> <a href="http://www.facebook.com/CSEA.NITC">Organized by CSEA</a></p>-->
+					<small>Press 'F' for Fullscreen</small>
+					<br>
+					<small>Press <em>Space</em> to navigate the presentation</small>
+				</section>
+                
+                <section data-background="img/monty.jpeg">
+					<!-- No content for this page -->
+				</section>
+
+				
+
+				<section>
+					<h2>Creating your first Python file</h2>
+					<p>
+						Open <font color="yellow">gedit</font> and type
+					</p>
+                    <p>
+                        <font color="red">print "hello world"</font>
+                    </p>
+                    <p>
+                        Save the file as <code><font color="yellow">filename.py</font></code>
+                    </p>
+				</section>
+
+                <section>
+					<h2>Running your first Python file</h2>
+					<p>
+						In your terminal, type
+					</p>
+                    <pre><code data-trim contenteditable>
+user:~$ python filename.py
+					</code></pre>
+				</section>
+                
+                <section>
+					<h2>Few examples of Python statements</h2>
+                    <pre><code data-trim contenteditable>
+print "python is cool"
+a = input()
+b = 5
+c = "hello"
+d = a + b
+b = b + 1 
+a += 1
+print d, b
+                    </code></pre>
+                    <p><small>Try them!! Take around <font color="yellow">7 and a half minutes</font> :)</small></p>
+				</section>
+                
+                <section>
+					<h2>Some powerful statements...</h2>
+                    <p>
+                        Conditional Statements
+                    </p>
+                    <pre><code data-trim contenteditable>
+if &lt;condition 1&gt;:
+    statement 1
+    statement 2
+    ....
+                    </code></pre>
+                    <p><small>Pay special attention to <font color="red">indentation</font> and the <font color="red">colon (:)</font> symbol</small></p>
+				</section>
+                
+                <section>
+					<h2>Some powerful statements...</h2>
+                    <p>
+                        Conditional Statements
+                    </p>
+                    <p><small>Enhancing the if-conditions</small></p>
+                    <pre><code data-trim contenteditable>
+if &lt;condition 1&gt;:
+    statement 1
+    statement 2
+    ....
+elif &lt;condition 2&gt;:
+    statement 3
+    statement 4
+else:
+    statement 5
+    ....
+                    </code></pre>
+                    <p><small>Pay special attention to <font color="red">indentation</font> and the <font color="red">colon (:)</font> symbol</small></p>
+				</section>
+                
+                <section>
+                    <h2><font color="yellow">Let's try something</font></h2>
+                    <p><i>We give you one name out of - Tyrion, Arya, Daenerys</i></p>
+                    <p><i>You tell me their house </i></p>
+                    <pre><code data-trim contenteditable>
+Sample Input (Take name as input): 
+Tyrion
+John Snow
+
+Sample Output (Print the house):
+Lannister
+You know nothing
+                    </code></pre>
+                    <p><small><font color="red">Don't</font> go to the next slide before you try this question !!</small></p>
+                </section>
+                
+                <section>
+                    <h2><font color="yellow">Let's see the solution</font></h2>
+                    <p><i>Hope you tried it yourself first <font color="yellow">  :P</font></i></p>
+                    <pre><code data-trim contenteditable>
+name = raw_input()
+if name == "Tyrion":
+    print "Lannister"
+elif name == "Arya":
+    print "Stark"
+elif name == "Daenerys":
+    print "Targaryen"
+else:
+    print "You know nothing"
+                    </code></pre>
+                    <p><small>Dont forget the <font color="red">indentation</font> and <font color="red">colon (:)</font> where required</small></p>
+                </section>
+                
+                <section>
+					<h2>Some powerful statements...</h2>
+                    <p>
+                        Looping statements
+                    </p>
+                    <pre><code data-trim contenteditable>
+while &lt;condition&gt;:
+    statement 1
+    statement 2
+    ....
+                    </code></pre>
+                    <p><small>Pay special attention to <font color="red">indentation</font> and the <font color="red">colon (:)</font> symbol</small></p>
+				</section>
+                
+                <section>
+                    <h2><font color="yellow">Let's try something</font><font color="red"> again!</font></h2>
+                    <p><i>Input a number from the user. Then, take n such numbers using the <b>while</b> loop and give me their sum</i></p>
+                    <pre><code data-trim contenteditable>
+Sample Input: 
+5
+2
+2
+2
+3
+3
+
+Sample Output:
+12
+                    </code></pre>
+                    <p><small>We will try this for another <font color="yellow">7 and a half minutes :P</font></small></p>
+                </section>
+                
+                <section>
+                    <p>Folks! Python's power lies in it's <font color="yellow">inbuilt  functions. </font><br>Let's learn how to use them :)</p>
+                </section>
+                
+                <section>
+                    <h2>Inbuilt Functions</h2>
+                    <p>Functions help us stand on the shoulders of giants!</p>
+                    <pre><code data-trim contenteditable>
+import math
+
+pi = math.pi
+a = math.sin(pi/2)
+print a
+                    </code></pre>
+                </section>
+                
+                 <section>
+                    <h2>List and tuples</h2>
+                    <p>This is a list. <i>It is bound by <font color="red">square brackets []</font></i></p>
+                    <pre><code data-trim contenteditable>
+[1, 2, "hello", [3, 4]]
+                    </code></pre>
+                    <br>
+                    <p>This is a tuple. <i>It is bound by <font color="red">round brackets ()</font></i></p>
+                    <pre><code data-trim contenteditable>
+(1, 2, "hello", [3, 4])
+                    </code></pre>
+                    <p><small>Once created, contents of tuples <font color="yellow">cannot be changed</font>. For a list, we can modify.</small></p>
+                </section>
+                
+                
+                
+                <section>
+                    <h2>Revisitng loops</h2>
+                    <p>for loop</p>
+                    <pre><code data-trim contenteditable>
+#Print even numbers till 100
+for i in range(101):
+	if i%2==0:
+		print i
+                    </code></pre>
+                    <p><small>Pay special attention to <font color="red">indentation</font> and the <font color="red">colon (:)</font></small></p>
+                </section>
+		<section>
+			<h2><font color="#FF5722">Dictionaries  </font></h2>
+			<pre><code data-trim contenteditable>
+			 
+dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+
+print "dict['Name']: ", dict['Name']
+print "dict['Age']: ", dict['Age']
+	
+                    </code></pre>
+		</section >
+        <section>
+            <p>Remember, we talked about functions. Let's see how to make our own functions.</p>
+            <p>Let's see how to become a ninja python developer.</p>
+        </section>
+                <section>
+			<h2><font color="#FF5722">User Defined Functions in Python</font></h2>
+			<pre><code data-trim contenteditable>
+#A function has no return type
+def functionname( parameters ):
+   function_suite
+   return [expression] #(optional)
+
+
+"Example"
+def printme( str ):
+   "This prints a passed string into this function"
+   print str
+   return	
+                    </code></pre>
+            <p><small>Do you see the use of <font color="red"> "#"</font>? That's used for putting comments</small></p>
+		</section>
+
+		<section>
+			<h2><font color="#FF5722">Example of User defined function</font></h2>
+			<pre><code data-trim contenteditable>
+			def sum(a,b):
+     c=a+b
+     return c
+
+a=10
+b=20
+print sum(a,b)
+
+
+                    </code></pre>
+		</section>
+			
+                <section>
+                    <p>Let me show you the power of python by spamming whatsapp :D</p>
+                    <a href="http://athena.nitc.ac.in/saksham_b130917cs/whatsapp_spam.zip">Click here to download the file</a>
+                    <p><small>Run in terminal:</small></p>
+                        <pre><code data-trim contenteditable>
+$user/Downloads:~ unzip whatsapp_spam.zip
+$user/Downloads:~ python whatsapp_spam.pyc
+                        </code></pre>
+                </section>
+                
+                
+                <section>
+                    <h2><font color="#FF5722">TAKE A BREAK!</font></h2>
+                    <p>
+                        We will take a break from Python and move to Web Development. We will discuss more python tomorrow.
+                    </p>
+                    <p>
+                        For the next session, <a href="http://slides.com/saikarthikvedula/deck/fullscreen">Click here</a>
+                    </p>
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
